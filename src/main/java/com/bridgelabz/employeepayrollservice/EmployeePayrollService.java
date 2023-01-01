@@ -33,7 +33,7 @@ public class EmployeePayrollService {
     }
 
     /**
-     *
+     * UC4
      *
      * @param writeTo
      */
@@ -49,20 +49,12 @@ public class EmployeePayrollService {
         if (printTo.equals(IOService.FILE_IO))
             new EmployeePayrollFileIOService().printData();
     }
+
     public long countEntries() {
         return new EmployeePayrollFileIOService().countEntries();
     }
-    /**
-     *
-     *
-     * @param readFrom
-     * @return
-     */
-    public List<EmployeePayrollData> readData(IOService readFrom) {
-        if (readFrom.equals(IOService.FILE_IO))
-            return new EmployeePayrollFileIOService().readData();
-        return null;
-    }
+
+
     public static boolean deleteFiles(File contentsToDelete) {
         File[] allContents = contentsToDelete.listFiles();
         if (allContents != null) {

@@ -23,7 +23,7 @@ public class JavaWatchService {
     private final Map<WatchKey, Path> dirWatchers;
 
     // Creates a WatchService and registers the given directory
-    JavaWatchService(Path dir) throws IOException {
+    public JavaWatchService(Path dir) throws IOException {
         this.watcher = FileSystems.getDefault().newWatchService();
         this.dirWatchers = new HashMap<WatchKey, Path>();
         scanAndRegisterDirectories(dir);
@@ -49,7 +49,7 @@ public class JavaWatchService {
 
     // Process all events for keys queued to the watcher
 
-    void processEvents() {
+    public void processEvents() {
         while (true) {
             WatchKey key; // wait for key to be signalled
             try {
