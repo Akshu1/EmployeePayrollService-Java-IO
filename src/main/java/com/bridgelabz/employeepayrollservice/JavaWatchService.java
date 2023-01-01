@@ -1,24 +1,14 @@
 package com.bridgelabz.employeepayrollservice;
 
 import java.io.IOException;
-import java.nio.file.FileSystems;
-import java.nio.file.FileVisitResult;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.SimpleFileVisitor;
-import java.nio.file.WatchEvent;
-import java.nio.file.WatchEvent.Kind;
-import java.nio.file.WatchKey;
-import java.nio.file.StandardWatchEventKinds;
-import java.nio.file.WatchService;
+import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.HashMap;
 import java.util.Map;
-
 public class JavaWatchService {
-    private static final Kind<?> ENTRY_DELETE = StandardWatchEventKinds.ENTRY_DELETE;
-    private static final Kind<?> ENTRY_MODIFY = StandardWatchEventKinds.ENTRY_MODIFY;
-    private static final Kind<?> ENTRY_CREATE = StandardWatchEventKinds.ENTRY_CREATE;
+    private static final WatchEvent.Kind<?> ENTRY_DELETE = StandardWatchEventKinds.ENTRY_DELETE;
+    private static final WatchEvent.Kind<?> ENTRY_MODIFY = StandardWatchEventKinds.ENTRY_MODIFY;
+    private static final WatchEvent.Kind<?> ENTRY_CREATE = StandardWatchEventKinds.ENTRY_CREATE;
     private final WatchService watcher;
     private final Map<WatchKey, Path> dirWatchers;
 

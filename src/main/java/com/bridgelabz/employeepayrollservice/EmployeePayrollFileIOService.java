@@ -5,15 +5,9 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
-
 public class EmployeePayrollFileIOService {
     private static String FILE_NAME = "payroll-data.txt";
 
-    /**
-     *
-     *
-     * @param employeeList
-     */
     public void writeEmployeePayrollDate(List<EmployeePayrollData> employeeList) {
         StringBuffer employeeBuffer = new StringBuffer();
         employeeList.forEach(employee -> {

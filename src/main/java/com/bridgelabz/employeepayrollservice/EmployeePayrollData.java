@@ -1,21 +1,23 @@
 package com.bridgelabz.employeepayrollservice;
 
 public class EmployeePayrollData {
-    private int id;
-    private String name;
-    private double salary;
-    /*
-    parameterized construtor to get values
-     */
-    public EmployeePayrollData(int id, String name, double salary) {
-        this.id = id;
-        this.name = name;
-        this.salary = salary;
+    private int employeeId;
+    private String employeeName;
+    private double employeeSalary;
+
+    public EmployeePayrollData(int employeeId, String employeeName, double employeeSalary) {
+        this.employeeId = employeeId;
+        this.employeeName = employeeName;
+        this.employeeSalary = employeeSalary;
     }
-    /*
-    toString method to read odject o/p as string
+
+    /**
+     * This method is Collecting the data From Employee
      */
+
+    @Override
     public String toString() {
-        return "EmployeePayrollData [id=" + id + ", name=" + name + ", salary=" + salary + "]";
+        return "EmployeePayrollData [employeeId=" + employeeId + ", employeeName=" + employeeName + ", employeeSalary="
+                + employeeSalary + "]";
     }
 }

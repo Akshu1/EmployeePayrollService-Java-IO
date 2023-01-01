@@ -4,7 +4,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
 public class EmployeePayrollService {
     public enum IOService {
         CONSOLE_IO, FILE_IO, REST_IO
@@ -49,12 +48,9 @@ public class EmployeePayrollService {
         if (printTo.equals(IOService.FILE_IO))
             new EmployeePayrollFileIOService().printData();
     }
-
     public long countEntries() {
         return new EmployeePayrollFileIOService().countEntries();
     }
-
-
     public static boolean deleteFiles(File contentsToDelete) {
         File[] allContents = contentsToDelete.listFiles();
         if (allContents != null) {
