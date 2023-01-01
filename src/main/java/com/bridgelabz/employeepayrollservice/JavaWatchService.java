@@ -30,6 +30,7 @@ public class JavaWatchService {
     private void scanAndRegisterDirectories(final Path start) throws IOException {
         // register directory and sub-directories
         Files.walkFileTree(start, new SimpleFileVisitor<Path>() {
+
             public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
                 registerDirWatchers(dir);
                 return FileVisitResult.CONTINUE;

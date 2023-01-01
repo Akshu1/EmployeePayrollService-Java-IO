@@ -1,3 +1,0 @@
-EmployeePayrollData [employeeId=1, employeeName=Rama, employeeSalary=50000.0]
-EmployeePayrollData [employeeId=3, employeeName=Krishna, employeeSalary=50000.0]
-EmployeePayrollData [employeeId=3, employeeName=Krishna, employeeSalary=50000.0]
